@@ -1,9 +1,15 @@
 # CRMbook Outlook BCC add-in
 
-Prepared for https://rosholmde.github.io/crmbook-bcc/.
+Adds the configured CRMbook sync email address to BCC while composing a message. Existing BCC recipients are preserved, and resolved duplicates are skipped.
 
-Create a GitHub repository named crmbook-bcc under rosholmde. Upload the contents of this folder to the repository root, keeping assets in its folder. In repository Settings → Pages, publish from the main branch and root folder. Once commands.html is accessible over HTTPS, remove the old CRMbook BCC add-in from Outlook and install this manifest.xml.
+## Install
 
-These files include the CRMbook inbound email address in commands.js. Publishing them makes that address publicly readable. No mailbox contents are hosted here.
+Visit https://rosholmde.github.io/crmbook-bcc/ and download the Outlook installation file. Remove the previous CRMbook BCC add-in, then use https://aka.ms/olksideload → My add-ins → Custom Addins → Add a custom add-in → Add from File to install the new manifest.xml. Your organization may require administrator installation.
 
-The hosting address is prepared; publication and live Outlook testing are still required.
+Compose an email, click Add CRM BCC in the ribbon or Apps menu, and inspect BCC before sending. Live Outlook testing remains necessary.
+
+## Hosting
+
+GitHub Pages is configured to publish the main branch root over HTTPS. Keep commands.html, commands.js, manifest.xml, index.html, and the five PNG icons together at the repository root. The .nojekyll file disables Jekyll processing.
+
+The configured CRMbook inbound email address is publicly readable in commands.js. No mailbox contents are hosted here.
